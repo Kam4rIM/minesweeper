@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Objects;
 
 public class Tile extends JButton {
     public Object source;
@@ -24,7 +25,10 @@ public class Tile extends JButton {
 
     }
     public void flag(){
-        if (!this.getText().equals("X")) {
+        if (!Objects.equals(this.getText(), "")){
+
+        }
+        else if ((!this.getText().equals("X"))) {
             this.setText("X");
             Game.flagged_cells++;
         }
